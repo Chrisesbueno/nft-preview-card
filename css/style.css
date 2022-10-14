@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue: hsl(217, 54%, 11%);
+    --very-dark-blue-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    font-family: 'Outfit';
+    font-weight: 400;
+}
+.container {
+    width: 350px;
+    padding: 1.5rem;
+    background-color: var(--very-dark-blue-bg);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+/* IMAGE CONTAINER -START- */
+.image__container {
+    position: relative;
+}
+.nft {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+.background {
+    display: none;
+}
+.nft:hover + .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    width: 100%;
+    height: 99%;
+    border-radius: 1rem;
+}
+.background img {
+    width: 50px;
+    height: 50px;
+}
+/* IMAGE CONTAINER -END- */
+/* TEXT CONTAINER -START- */
+.title {
+    margin: 1rem 0;
+    color: var(--white);
+}
+.subtitle {
+    color: var(--soft-blue);
+    font-weight: 300;
+    line-height: 1.5; 
+}
+.price__container, .price, .time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price__container {
+    margin: 1rem 0;
+}
+.price p {
+    color: var(--cyan);
+    margin-left: 0.5rem;
+}
+.time p {
+    margin-left: 0.5rem;
+    color: var(--soft-blue);
+}
+.user {
+    border-top: 1px groove var(--soft-blue);
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.user img {
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+.user p {
+    margin-left: 1rem;
+    color: var(--soft-blue);
+}
+.user p span {
+    color: var(--white);
+}
+/* TEXT CONTAINER -END- */
+.user p span:hover, .title:hover{
+    cursor: pointer;
+    color: var(--cyan);
+}
+/* CREDITS -START- */
+.attribution {
+    font-size: 14px;
+    color: var(--white);
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--soft-blue);
+}
+.attribution a:hover {
+    color: var(--cyan);
+}
+/* CREDITS -END- */
